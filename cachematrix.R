@@ -17,16 +17,19 @@
 
 
 makeCacheMatrix <- function(x = matrix()) {
-	# Initialize inv to NULL
+	### Initialize local inv to NULL
 	inv <- NULL
+
 	set <- function(y) {
 		x   <<- y
 		inv <<- NULL
 	}
+
 	get <- function() x
 	setinverse <- function(solve) inv <<- solve
 	getinverse <- function() inv
-
+	
+	### Create access list with named list members
 	list(set = set, get = get, setinverse = setinverse,
        getinverse = getinverse)
 }
