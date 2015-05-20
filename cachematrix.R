@@ -67,5 +67,5 @@ cacheSolve <- function(x, ...) {
 				}
 				#Cache the result
         x$setinverse(inv)
-        inv
+        return (inv)
 }
